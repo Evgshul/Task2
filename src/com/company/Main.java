@@ -10,17 +10,22 @@ public class Main {
         int n = scanner.nextInt();
         if (n % 2 == 0) {
             for (int j = 1; j <= n; j = j + 2) {
+                for (int k=1;k<=n-j;k=k+2)
+                    System.out.print(" ");
                 for (int i = 0; i <= j; i++) {
                     System.out.print("*");
-                                    }
+                }
                 System.out.println();
             }
         } else {
             for (int j = 0; j <= n; j = j + 2) {
-                for (int i = 0; i <= j; i++) {
-                    System.out.printf("*");
-                }
-                System.out.println();
+                for (int k=0; k<=n-j; k=k+2)
+                    System.out.print(" ");
+                    for (int i = 0; i <= j; i++) {
+                        System.out.printf("*");
+                    }
+                    System.out.println();
+
             }
         }
     }
